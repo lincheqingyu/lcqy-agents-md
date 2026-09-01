@@ -31,6 +31,6 @@
 
 | 文件 | 来源 | 主要参考价值 |
 | --- | --- | --- |
-| [`wofv1/AGENTS.reference.md`](project-examples/wofv1/AGENTS.reference.md) | 本地项目规则示例 | 长期维护、SSOT、TDD、文档职责和交付流程。 |
+| [`wofv1/AGENTS.reference.md`](wofv1/AGENTS.md) | 本地项目规则示例 | 长期维护、SSOT、TDD、文档职责和交付流程。 |
 
 `karpathy-inspired.md` 是社区作者的整理版本，不是 Andrej Karpathy 本人发布的官方文件。发布到 GitHub 前，应继续确认各来源文件的许可证和转载要求。

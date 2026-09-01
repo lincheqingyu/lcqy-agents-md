@@ -5,8 +5,12 @@
 ## 文档选择
 
 - [`development-guidelines.md`](development-guidelines.md)：长期维护、SSOT、根因修复、变更流程、测试和文档规范。
-- [`tech-stack-guidelines.md`](tech-stack-guidelines.md)：Java、Python、TypeScript/React、Rust/React 技术栈规范，按章节选择。
-- [`templates/AGENTS.zh-CN.md`](templates/AGENTS.zh-CN.md)：中文项目的最小起始模板。
+- [`tech-stack/README.md`](tech-stack/README.md)：技术栈规范索引。
+- [`tech-stack/java.md`](tech-stack/java.md)：Java 规范。
+- [`tech-stack/python.md`](tech-stack/python.md)：Python 规范。
+- [`tech-stack/typescript.md`](tech-stack/typescript.md)：TypeScript 与 React 规范。
+- [`tech-stack/rust.md`](tech-stack/rust.md)：Rust 及其跨 TypeScript/React 边界规范。
+- [`templates/AGENTS.zh-CN.md`](templates/AGENTS.zh-CN.md)：中文项目的项目详情与规则模板。
 
 ## `.agents/skills/`
 
@@ -16,4 +20,4 @@ Claude Code 使用 `.claude/skills/<name>/SKILL.md`，因此同一份 Skill 内�
 
 ## 原始参考资料
 
-原来的四个参考目录已经移动到 [`.tmp/references/`](../.tmp/references/)，来源、文件说明和归属信息见 [`../.tmp/references/README.md`](../.tmp/references/README.md)。参考资料不自动生效，也不是规则文档的第二个版本。
+原始参考目录位于 [`.tmp/references/`](../.tmp/references/)，来源、文件说明和归属信息见 [`../.tmp/references/README.md`](../.tmp/references/README.md)。参考资料不自动生效，也不是规则文档的第二个版本。

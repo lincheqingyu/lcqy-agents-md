@@ -1,30 +1,35 @@
-# Agent 指令规则库
+# Agent 规则库
 
-本仓库用于收集、整理和复用 `AGENTS.md` 规则。目标是让具体项目中的 `AGENTS.md` 保持简洁，只保留项目事实、项目约束和少量稳定的工程原则；可迁移的规则按需选择，不整份搬运。
+本仓库用于整理、维护和复用 `AGENTS.md` 规则。根目录的 `AGENTS.md` 是一份可以直接复制到其他项目使用的通用规则；`.agents/` 保存可按需组合的通用规范、技术栈指南和模板。
 
-## 目录结构
+## 仓库内容
 
 ```text
 .
-├── AGENTS.md                         # 本仓库的维护规则
-├── README.md                         # 使用入口和目录索引
+├── AGENTS.md                         # 可直接复制的通用项目规则
+├── README.md                         # 用途和使用入口
 ├── .agents/
-│   ├── README.md                     # 可复制文档的选择指南
-│   ├── development-guidelines.md     # 合并后的通用开发规范
-│   ├── tech-stack-guidelines.md      # 合并后的技术栈规范
-│   ├── skills/                       # Codex/Pi Skill 入口，当前为空
-│   └── templates/                    # 新项目的最小起始模板
-└── .tmp/
-    └── references/                   # 原始模仿资料，不作为项目规则入口
+│   ├── README.md                     # 可复制文档索引
+│   ├── development-guidelines.md     # 通用开发规范
+│   ├── tech-stack/                   # 按语言拆分的技术栈规范
+│   ├── templates/                    # 新项目 AGENTS.md 模板
+│   └── skills/                       # 项目级 Skill 入口
+└── .tmp/references/                  # 用于研究的原始参考资料
 ```
 
-## 如何为新项目准备 `AGENTS.md`
+## 如何使用
 
-1. 在目标项目根目录写入项目专属信息：项目目标、目录边界、真实命令、构建和测试入口、不可违反的业务约束。
-2. 从 [`.agents/development-guidelines.md`](.agents/development-guidelines.md) 选择需要的通用规范。
-3. 从 [`.agents/tech-stack-guidelines.md`](.agents/tech-stack-guidelines.md) 复制实际使用技术栈对应的章节。
-4. 删除不适用的条目，并根据目标项目事实重新验证命令、版本和路径。
+1. 将根目录的 `AGENTS.md` 复制到目标项目根目录。
+2. 填写其中的项目目标、目录边界、技术栈、真实命令和项目约束；删除不适用的项目详情项。
+3. 从 [`.agents/development-guidelines.md`](.agents/development-guidelines.md) 和 [`.agents/tech-stack/`](.agents/tech-stack/README.md) 选择需要追加的专项规则。
+4. 根据目标项目事实验证所有命令、版本、路径和技术栈约束。
 
-`.agents/` 下的普通 Markdown 是可复制的文档，不会自动应用到其他项目。只有放入 `.agents/skills/<name>/SKILL.md` 的内容才会作为 Codex/Pi 项目 Skill 被发现。Claude Code 项目 Skill 应放在 `.claude/skills/<name>/SKILL.md`。
+`.agents/` 下的普通 Markdown 是被动文档，不会自动应用到其他项目。只有放入 `.agents/skills/<name>/SKILL.md` 的内容才是 Codex/Pi 项目 Skill 入口。
 
-原始参考资料位于 [`.tmp/references/`](.tmp/references/)，只用于研究和提炼，不应整份复制到目标项目。
+## 参考资料
+
+[`.tmp/references/`](.tmp/references/) 保存原始参考内容和项目示例，只用于研究和提炼，不是正式规则的第二个版本。参考资料的来源与索引见 [`.tmp/references/README.md`](.tmp/references/README.md)。
+
+## 维护原则
+
+新增、移动或拆分文档时，同时更新相关索引和相对链接；规则应保持单一真相源、范围清晰且可验证。
